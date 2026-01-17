@@ -13,7 +13,8 @@ Starter implementation for a C5GAME OpenAPI automation pipeline.
 
 ## Quick start (skeleton)
 
-```python
+```bash
+PYTHONPATH=src python - <<'PY'
 from c5game import AccountConfig, StrategyConfig, SystemConfig, Pipeline
 
 config = SystemConfig(
@@ -37,6 +38,7 @@ config = SystemConfig(
 pipeline = Pipeline(config)
 results = pipeline.run_strategy("primary", config.strategies[0])
 print(results)
+PY
 ```
 
 > Replace endpoints with the concrete ones from the OpenDoc API pages.
